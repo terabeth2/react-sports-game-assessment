@@ -1,7 +1,8 @@
 import ScoreBoard from '../scoreboard/Scoreboard'
 import React from 'react'
 import Team from '../team/Team'
-import shotSound from './assets/audio/smb_fireball.wav'
+import shotAudio from '../../assets/audio/smb_fireball.wav'
+import scoreAudio from'../../assets/audio/smb_1-up.wav'
 
 class Game extends React.Component {
     constructor(props) {
@@ -19,8 +20,8 @@ class Game extends React.Component {
         }
       }
   
-      this.shotSound = new Audio('shotsound')
-      this.scoreSound = new Audio('./assets/audio/smb_1-up.wav')
+      this.shotSound = new Audio(shotAudio)
+      this.scoreSound = new Audio(scoreAudio)
     }
   
     shoot = (team) => {
